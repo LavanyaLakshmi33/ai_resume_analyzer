@@ -26,7 +26,7 @@ function App() {
     try {
 
       const response = await axios.post(
-        "https://ai-resume-analyzer-backend.onrender.com/upload",
+        "https://ai-resume-analyzer-backend-mval.onrender.com/upload",
         formData
       );
 
