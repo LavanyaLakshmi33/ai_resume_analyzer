@@ -4,12 +4,12 @@ const cors = require("cors");
 const multer = require("multer");
 const pdfParse = require("pdf-parse");
 const fs = require("fs");
-
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
 const app = express();
 
-app.use(cors({
-  origin: "http://localhost:5173"
-}));
+app.use(cors());
 
 app.use(express.json());
 
