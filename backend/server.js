@@ -39,7 +39,7 @@ app.post("/upload", upload.single("resume"), async (req, res) => {
 
     const resumeText = pdfData.text.toLowerCase();
 
-    const jobDescription = req.body.jobDescription.toLowerCase();
+    const jobDescription = (req.body.jobDescription || "").toLowerCase();
 
     const matchedSkills = [];
 
